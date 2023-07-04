@@ -1,0 +1,17 @@
+# Config file for the @EXPORT_TYPE@ cryptominisat Package
+# It defines the following variables
+#  PREPROCESS_INCLUDE_DIRS - include directories for cryptominisat5
+#  PREPROCESS_LIBRARIES    - libraries to link against
+#  PREPROCESS_EXECUTABLE   - the cryptominisat executable
+
+# Compute paths
+get_filename_component(PREPROCESS_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+set(PREPROCESS_INCLUDE_DIRS "@CONF_INCLUDE_DIRS@")
+
+# Our library dependencies (contains definitions for IMPORTED targets)
+include("${PREPROCESS_CMAKE_DIR}/@PREPROCESS_TARGETS_FILENAME@")
+
+# These are IMPORTED targets created by @PREPROCESS_TARGETS_FILENAME@
+set(PREPROCESS_VERSION_MAJOR @PROJECT_VERSION_MAJOR@)
+set(PREPROCESS_VERSION_MINOR @PROJECT_VERSION_MINOR@)
+set(PREPROCESS_EXECUTABLE preprocess)
