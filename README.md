@@ -13,7 +13,7 @@ sudo apt-get install build-essential cmake
 sudo apt-get install zlib1g-dev libboost-program-options-dev libboost-serialization-dev
 ```
 
-Then, build CryptoMiniSat, Louvain-Community, and Arjun:
+Then, build CryptoMiniSat, Louvain-Community, and manthan-preprocess:
 ```
 git clone https://github.com/priyanka-golia/cryptominisat
 cd cryptominisat
@@ -34,8 +34,8 @@ sudo make install
 sudo ldconfig
 
 cd ../..
-git clone https://github.com/meelgroup/arjun
-cd arjun
+git clone https://github.com/priyanka-golia/manthan-preprocess
+cd manthan-preprocess
 mkdir build && cd build
 cmake ..
 make
