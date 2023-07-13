@@ -34,8 +34,6 @@ sudo make install
 sudo ldconfig
 
 cd ../..
-git clone https://github.com/priyanka-golia/manthan-preprocess
-cd manthan-preprocess
 mkdir build && cd build
 cmake ..
 make
