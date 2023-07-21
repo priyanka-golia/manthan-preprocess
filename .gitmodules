@@ -1,0 +1,7 @@
+[submodule "louvain-community"]
+	path = louvain-community
+	url = https://github.com/meelgroup/louvain-community
+[submodule "cryptominisat"]
+	path = cryptominisat
+	url = https://github.com/priyanka-golia/cryptominisat
+	branch = for-manthan-preprocess
