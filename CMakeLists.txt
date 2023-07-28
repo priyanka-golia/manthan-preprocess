@@ -411,8 +411,10 @@ macro(preprocess_add_public_header LIBTARGET HEADER)
      )
 endmacro()
 
-find_package(cryptominisat5 CONFIG)
+
+find_package(cryptominisat5 PATHS ${CMAKE_SOURCE_DIR}/cryptominisat/build NO_DEFAULT_PATH)
 if (cryptominisat5_FOUND)
+    message(STATUS "CrytoMiniSat root dir: ${CRYPTOMINISAT5_ROOT_DIR}")
     message(STATUS "Found CryptoMiniSat 5.x")
     message(STATUS "CryptoMiniSat5 dynamic lib: ${CRYPTOMINISAT5_LIBRARIES}")
     message(STATUS "CryptoMiniSat5 static lib:  ${CRYPTOMINISAT5_STATIC_LIBRARIES}")
